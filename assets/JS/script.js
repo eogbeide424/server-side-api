@@ -17,7 +17,7 @@ var getFiveDay = function(lat, lon, cityInput,) {
         console.log(response);
         $('.card-header').empty();
 
-        var forecastHeader =$('<h3>').text('5-Day Forecast:');
+        var forecastHeader =$('<h3>').text('5-Day Forecast:'+ cityInput);
         var cardOutline =$('<div>').addClass('card-deck');
         $('.card-title').empty();
 
