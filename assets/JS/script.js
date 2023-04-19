@@ -14,7 +14,7 @@ var getFiveDay = function(lat, lon, cityInput,) {
         url: requestUrl,
         method: `GET`
     }).then(function(response){
-        console.log(response);
+        // console.log(response);
         $('.card-header').empty();
 
         var forecastHeader =$('<h3>').text('5-Day Forecast:'+ cityInput);
@@ -52,16 +52,16 @@ var getCoord = function(city){
         url: convertUrl,
         method: "GET"
     }).then(function(response){
-        console.log(response[0].lat);
-        console.log(response[0].lon);
-        console.log(response[0]);
-        console.log(cityInput);
+        // console.log(response[0].lat);
+        // console.log(response[0].lon);
+        // console.log(response[0]);
+        // console.log(cityInput);
 
         data = response[0];
         lat = data.lat;
         lon = data.lon;
-        console.log(lon);
-        console.log(lat);
+        // console.log(lon);
+        // console.log(lat);
 
         localStorage.setItem(cityInput, JSON.stringify(data));
 
@@ -76,4 +76,4 @@ var getCoord = function(city){
 };
 
 searchBtn.on('click', getCoord);
-console.log(apiKey);
+// console.log(apiKey);
