@@ -46,7 +46,7 @@ var getFiveDay = function(lat, lon, cityInput,) {
 var getCoord = function(city){
     var city = $('#city');
     var cityInput = city.val();
-    var convertUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityInput}{&limit=${1}&appid=${apiKey}`;
+    var convertUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityInput}{&limit=${1}&appid=${apiKey}`;
 
     $.ajax({
         url: convertUrl,
